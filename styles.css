@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+:root {
+    --main-font: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    background: linear-gradient(to top, #FFD700, #BDB76B);
+    width: 100vw;
+    min-height: 100vh;
+}
+
+#pikachu {
+    width: 20%;
+    position: absolute;
+    top: calc(100% - 30%);
+}
+
+#pokebola {
+    position: absolute;
+    width: 10%;
+    top: 33%;
+    left: 35%;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 70%;
+    background: linear-gradient(to right, #FF8C00,#FF6347);
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+}
+
+nav a {
+    height: 40%;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+
+nav div h2 {
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+nav div input {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    margin-top: 5vh;
+}
+
+#conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    min-height: 400px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: #2196f3;
+}
+
+#datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:auto;
+    margin-top: 1vh;
+    border-bottom: 1px solid black;
+}
+
+#datos img {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 150px;
+    background-color: white;
+}
+
+#datos h1 {
+    font-size: xx-large;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-transform: uppercase;
+}
+
+#estadisticas {
+    text-align: center;    
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    line-height: 35px;
+}
+
+#estadisticas ul {
+    list-style: none;
+    text-align: start;
+}
+
+#estadisticas span {
+    color: rgb(248, 168, 18);
+    text-shadow: 1px 1px 2px black;
+}
