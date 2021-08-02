@@ -12,13 +12,7 @@
 body {
     background: linear-gradient(to top, #FFD700, #BDB76B);
     width: 100vw;
-    min-height: 100vh;
-}
-
-#pikachu {
-    width: 20%;
-    position: absolute;
-    top: calc(100% - 30%);
+    height: auto;
 }
 
 #pokebola {
@@ -86,6 +80,11 @@ main {
     margin-top: 5vh;
 }
 
+#enviar {
+    width: 20%;
+    margin: 10px;
+}
+
 #conteiner {
     display: flex;
     flex-direction: column;
@@ -111,7 +110,7 @@ main {
 #datos img {
     border: 1px solid black;
     border-radius: 50%;
-    width: 150px;
+    width: 100%;
     background-color: white;
 }
 
