@@ -1,0 +1,4 @@
+{
+    12-08-2021 (FIX)
+        •Borrar la última busqueda en el searcher (se acumula cuando hago otra busqueda) 
+}

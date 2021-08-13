@@ -150,9 +150,7 @@ enviar.click(buscarPokemon)
 
 const buscar = document.getElementById('buscador')
 
-function pokemonSearcher(e) {
-
-    e.preventDefault()
+function pokemonSearcher() {
 
     const lista = document.getElementById('recomendados')
 
@@ -188,29 +186,25 @@ function pokemonSearcher(e) {
     setTimeout(()=>{
 
         arrayVacio.map( e => {
+            
+            if(e.name.includes(buscador)) {
 
-           if(e.name.includes(buscador)) {
+                const pokeUrl = e.url
 
-            const pokeUrl = e.url
+                let a = document.createElement('a')
 
-            let a = document.createElement('a')
+                a.innerText = `${e.name}`
 
-            a.innerText = `${e.name}`
+                lista.appendChild(a)
 
-            // a.href = `${e.url}`
+                a.addEventListener('click', function(){
 
-            lista.appendChild(a)
+                    borrarPokemon()
 
-            a.addEventListener('click', function(){
+                    getPokemon(pokeUrl)
 
-                borrarPokemon()
-
-                getPokemon(pokeUrl)
-
-            })
-
-           } 
-
+                })
+            } 
         })
 
     }, 400)
