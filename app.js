@@ -142,3 +142,79 @@ function borrarPokemon() {
 }
 
 enviar.click(buscarPokemon)
+
+
+//Filtrar Pokemon
+
+
+
+const buscar = document.getElementById('buscador')
+
+function pokemonSearcher(e) {
+
+    e.preventDefault()
+
+    const lista = document.getElementById('recomendados')
+
+    const buscador = $('#buscador').val().toLowerCase()
+
+    const arrayUrl = []
+
+    for(let i =0; i <= 1120; i = i+20) {
+
+        let urls = `https://pokeapi.co/api/v2/pokemon?offset=${i}&limit=20`
+
+        arrayUrl.push(urls)
+
+    } 
+
+    let arrayVacio = []
+
+    arrayUrl.forEach(element => {
+
+        $.get(element, function(respuesta, estado) {
+
+            if(estado === 'success') {
+
+                for(const e of respuesta.results) {
+
+                    arrayVacio.push(e)
+
+                }
+            }
+        })
+    })
+
+    setTimeout(()=>{
+
+        arrayVacio.map( e => {
+
+           if(e.name.includes(buscador)) {
+
+            const pokeUrl = e.url
+
+            let a = document.createElement('a')
+
+            a.innerText = `${e.name}`
+
+            // a.href = `${e.url}`
+
+            lista.appendChild(a)
+
+            a.addEventListener('click', function(){
+
+                borrarPokemon()
+
+                getPokemon(pokeUrl)
+
+            })
+
+           } 
+
+        })
+
+    }, 400)
+}
+
+buscar.addEventListener('change', pokemonSearcher)
+

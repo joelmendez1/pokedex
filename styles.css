@@ -138,3 +138,25 @@ main {
     color: rgb(248, 168, 18);
     text-shadow: 1px 1px 2px black;
 }
+
+#recomendados {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    overflow-y: scroll;
+    margin-left: 20px;
+}
+
+#recomendados a {
+    text-decoration: none;
+    color: white;
+
+}
+
+#recomendados a:hover{
+    color: red;
+}
